@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/manuelrmenesesr/advantageWebAutomation#readme",
   "devDependencies": {
-    "@playwright/test": "^1.48.0",
-    "@types/node": "^22.7.5"
+    "@playwright/test": "1.48.0",
+    "@types/node": "22.7.5"
   }
 }
