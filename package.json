@@ -1,0 +1,26 @@
+{
+  "name": "advantagewebautomation",
+  "version": "1.0.0",
+  "description": "Base script for automation web testing",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelrmenesesr/advantageWebAutomation.git"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "e2e"
+  ],
+  "author": "Manuel Meneses",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manuelrmenesesr/advantageWebAutomation/issues"
+  },
+  "homepage": "https://github.com/manuelrmenesesr/advantageWebAutomation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.5"
+  }
+}
