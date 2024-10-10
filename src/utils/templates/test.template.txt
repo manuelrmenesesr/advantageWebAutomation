@@ -1,0 +1,8 @@
+import { {{controllerName}} } from "{{subfolder}}../controllers/{{controllerName}}.spec";
+import { test } from "./{{suite}}.hooks";
+
+const {{controllerNameLowerCase}} = new {{controllerName}}();
+
+test({{controllerNameLowerCase}}.getDescription(), async ({ page }) => {
+  await {{controllerNameLowerCase}}.exec(page);
+});

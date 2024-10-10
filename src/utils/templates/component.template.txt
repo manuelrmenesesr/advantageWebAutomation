@@ -1,0 +1,17 @@
+import { Page, expect } from "@playwright/test";
+import { Component } from "../../utils/component.util";
+import { {{componentName}}Locators } from "./{{componentName}}.locators";
+
+export class {{componentName}} extends Component {
+  constructor(page: Page) {
+    super(page);
+  }
+
+  async enterData(data: string) {
+    await this.page.locator({{componentName}}Locators.css_inpTest).fill(data);
+  }
+
+  async finalAssert() {
+    await expect(this.page.locator({{componentName}}Locators.css_inpTest)).toBeVisible();
+  }
+}

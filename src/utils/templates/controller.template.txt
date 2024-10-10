@@ -1,0 +1,15 @@
+import { Controller } from "../utils/controller.utils";
+
+export class {{controllerName}} extends Controller {
+  constructor() {
+    super("{{controllerName}}");
+  }
+
+  protected async loadDataTest() {
+    // TODO Auto-generated method stub
+  }
+
+  protected async workflow() {
+    // TODO Auto-generated method stub
+  }
+}

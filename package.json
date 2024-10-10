@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Base script for automation web testing",
   "main": "index.js",
-  "scripts": {},
+  "type": "module",
+  "scripts": {
+    "generate:component": "node src/utils/createComponent.util.js",
+    "generate:controller": "node src/utils/createController.util.js",
+    "generate:test": "node src/utils/createTest.util.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manuelrmenesesr/advantageWebAutomation.git"
