@@ -6,6 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 function createComponent(controllerName) {
+  controllerName = controllerName.charAt(0).toUpperCase() + controllerName.slice(1);
   const templatePath = path.join(__dirname, "templates/controller.template.txt");
   const controllerPath = path.join(__dirname, "../controllers", `${controllerName}.spec.ts`);
 
