@@ -5,12 +5,15 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? undefined : 1,
   reporter: "html",
   use: {
     baseURL: "https://www.advantageonlineshopping.com",
+    headless: process.env.CI ? true : false,
+    launchOptions: { slowMo: process.env.CI ? 0 : 1000 },
     screenshot: process.env.CI ? "off" : "only-on-failure",
     trace: "on-first-retry",
+    video: process.env.CI ? "on" : "off",
   },
 
   projects: [
