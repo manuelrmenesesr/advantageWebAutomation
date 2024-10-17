@@ -22,8 +22,9 @@ function createComponent(componentName) {
   let template1 = fs.readFileSync(templateComponentPath, "utf8");
   let template2 = fs.readFileSync(templateLocatorsPath, "utf8");
 
-  const newComponent1 = template1.replace(/{{\s*componentName\s*}}/g, componentName);
-  const newComponent2 = template2.replace(/{{\s*componentName\s*}}/g, componentName);
+  let newComponent1 = template1.replace(/{{\s*componentName\s*}}/g, componentName);
+  newComponent1 = newComponent1.replace(/{{\s*pascalComponentName\s*}}/g, componentName.charAt(0).toUpperCase() + componentName.slice(1));
+  let newComponent2 = template2.replace(/{{\s*componentName\s*}}/g, componentName);
 
   fs.writeFileSync(componentPath, newComponent1);
   fs.writeFileSync(componentLocatorsPath, newComponent2);

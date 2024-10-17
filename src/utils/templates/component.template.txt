@@ -2,7 +2,7 @@ import { Page, expect } from "@playwright/test";
 import { Component } from "../../utils/component.util";
 import { {{componentName}}Locators } from "./{{componentName}}.locators";
 
-export class {{componentName}} extends Component {
+export class {{pascalComponentName}} extends Component {
   constructor(page: Page) {
     super(page);
   }
