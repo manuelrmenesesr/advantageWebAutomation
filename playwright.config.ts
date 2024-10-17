@@ -8,7 +8,7 @@ export default defineConfig({
   workers: process.env.CI ? undefined : 1,
   reporter: "html",
   use: {
-    baseURL: "https://www.advantageonlineshopping.com",
+    baseURL: "https://ui-nxt360.qa.smartpayment.com.mx:7001",
     headless: process.env.CI ? true : false,
     launchOptions: { slowMo: process.env.CI ? 0 : 1000 },
     screenshot: process.env.CI ? "off" : "only-on-failure",
@@ -20,14 +20,6 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
-    },
-    {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
-    },
-    {
-      name: "webkit",
-      use: { ...devices["Desktop Safari"] },
     },
   ],
 });
