@@ -6,6 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 function createComponent(componentName) {
+  componentName = componentName.charAt(0).toLowerCase() + componentName.slice(1);
   const componentDir = path.join(__dirname, "../components", componentName);
   const templateComponentPath = path.join(__dirname, "templates/component.template.txt");
   const templateLocatorsPath = path.join(__dirname, "templates/component.locators.template.txt");
