@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 import { Component } from "../../utils/component.util";
 import { homeLocators } from "./home.locators";
 
@@ -7,18 +7,23 @@ export class Home extends Component {
     super(page);
   }
 
-  async clickOnFatherTree() {
-    //await this.page.goto('https://ui-nxt360.qa.smartpayment.com.mx:7001/browser/');
+  async clickOnCentralMayorista() {
     await this.page
-      .getByRole(homeLocators.fatherTree.role, homeLocators.fatherTree.options)
-      .getByRole("button")
+      .getByRole(
+        homeLocators.role_treeCentralMayorista.role,
+        homeLocators.role_treeCentralMayorista.options
+      )
+      .getByRole(homeLocators.role_treeCentralMayorista.subRole)
       .click();
   }
 
-  async clickOnSonTree() {
+  async clickOnCentralMayorista01() {
     await this.page
-      .getByRole(homeLocators.sonTree.role, homeLocators.sonTree.options)
-      .getByRole("button")
+      .getByRole(
+        homeLocators.role_treeCentralMayorista01.role,
+        homeLocators.role_treeCentralMayorista01.options
+      )
+      .getByRole(homeLocators.role_treeCentralMayorista01.subRole)
       .click();
   }
 
@@ -28,5 +33,22 @@ export class Home extends Component {
 
   async clickOnAdd() {
     await this.page.locator(homeLocators.css_btnAdd).click();
+  }
+
+  async enterPuntoDeVenta(data: string) {
+    await this.page.getByLabel(homeLocators.lbl_inpPuntoDeVenta).fill(data);
+  }
+
+  async clickOnCrear() {
+    await this.page
+      .getByRole(
+        homeLocators.role_btnCrear.role,
+        homeLocators.role_btnCrear.options
+      )
+      .click();
+  }
+
+  async ttfAssert() {
+    await expect(this.page.getByText(homeLocators.txt_msgError)).toBeVisible();
   }
 }

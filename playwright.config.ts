@@ -15,7 +15,6 @@ export default defineConfig({
     trace: "on-first-retry",
     video: process.env.CI ? "on" : "off",
   },
-
   projects: [
     {
       name: "chromium",
