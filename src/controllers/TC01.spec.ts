@@ -8,9 +8,6 @@ export class TC01 extends Controller {
 
   protected async workflow() {
     let home = new Home(this.page);
-    home.clickOnFatherTree();
-    home.clickOnSonTree();
-    home.hoverOnTree();
-    home.clickOnAdd();
+    home.clickOnCentralMayorista();
   }
 }
