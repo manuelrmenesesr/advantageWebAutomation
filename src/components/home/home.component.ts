@@ -35,6 +35,13 @@ export class Home extends Component {
     await this.page.locator(homeLocators.css_btnAdd).click();
   }
 
+  async clickOnPuntoDeVenta() {
+    await this.page
+      .getByLabel(homeLocators.obj_optPuntoDeVenta.lbl)
+      .locator(homeLocators.obj_optPuntoDeVenta.css)
+      .click();
+  }
+
   async enterPuntoDeVenta(data: string) {
     await this.page.getByLabel(homeLocators.lbl_inpPuntoDeVenta).fill(data);
   }

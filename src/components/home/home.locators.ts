@@ -45,6 +45,10 @@ export const homeLocators = {
   role_treeCentralMayorista01: role_treeCentralMayorista01,
   css_divHoverTree: ".node-content",
   css_btnAdd: "button.p-button.p-button-icon-only.p-button-rounded .pi.pi-plus",
+  obj_optPuntoDeVenta: {
+    lbl: "Punto de venta",
+    css: "a",
+  },
   lbl_inpPuntoDeVenta: "Nombre del Punto de ventaMá",
   role_btnCrear: role_btnCrear,
   txt_msgError: "No se pudo crear el nodo",

@@ -8,6 +8,13 @@ export class TC01 extends Controller {
 
   protected async workflow() {
     let home = new Home(this.page);
-    home.clickOnCentralMayorista();
+    await home.clickOnCentralMayorista();
+    await home.clickOnCentralMayorista01();
+    await home.hoverOnTree();
+    await home.clickOnAdd();
+    await home.clickOnPuntoDeVenta();
+    await home.enterPuntoDeVenta("Lorem Ipsum");
+    await home.clickOnCrear();
+    await home.ttfAssert();
   }
 }
