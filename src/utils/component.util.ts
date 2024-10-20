@@ -6,4 +6,8 @@ export class Component {
   constructor(page: Page) {
     this.page = page;
   }
+
+  public async pause() {
+    await this.page.pause();
+  }
 }

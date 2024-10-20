@@ -23,3 +23,10 @@ export type AriaRole =
   | "textbox"
   | "tree"
   | "treeitem";
+
+export type AriaObject = {
+  role: AriaRole;
+  options: {
+    name: string;
+  };
+};
