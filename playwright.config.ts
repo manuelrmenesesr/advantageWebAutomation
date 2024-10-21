@@ -1,5 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
+if (!process.env.CI) process.env.DEBUG = "pw:api";
+
 export default defineConfig({
   testDir: "./src/tests",
   fullyParallel: true,
