@@ -2,6 +2,28 @@ import { defineConfig, devices } from "@playwright/test";
 
 if (!process.env.CI) process.env.DEBUG = "pw:api";
 
+const projects = process.env.CI
+  ? [
+      {
+        name: "chromium",
+        use: { ...devices["Desktop Chrome"] },
+      },
+      {
+        name: "firefox",
+        use: { ...devices["Desktop Firefox"] },
+      },
+      {
+        name: "webkit",
+        use: { ...devices["Desktop Safari"] },
+      },
+    ]
+  : [
+      {
+        name: "chromium",
+        use: { ...devices["Desktop Chrome"] },
+      },
+    ];
+
 export default defineConfig({
   testDir: "./src/tests",
   fullyParallel: true,
@@ -17,19 +39,5 @@ export default defineConfig({
     trace: "on-first-retry",
     video: process.env.CI ? "on" : "off",
   },
-
-  projects: [
-    {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
-    },
-    {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
-    },
-    {
-      name: "webkit",
-      use: { ...devices["Desktop Safari"] },
-    },
-  ],
+  projects,
 });
