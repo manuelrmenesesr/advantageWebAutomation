@@ -1,4 +1,4 @@
-import { Page, expect } from "@playwright/test";
+import { Page } from "@playwright/test";
 import { Component } from "../../utils/component.util";
 import { homeLocators } from "./home.locators";
 
@@ -7,7 +7,7 @@ export class Home extends Component {
     super(page);
   }
 
-  async clockOnSearch() {
+  async clickOnSearchOption() {
     await this.page.getByTitle(homeLocators.tle_btnSearch).click();
   }
 
@@ -15,15 +15,7 @@ export class Home extends Component {
     await this.page.getByPlaceholder(homeLocators.phr_inpSerach).fill(data);
   }
 
-  async search() {
+  async clickOnSearch() {
     await this.page.getByPlaceholder(homeLocators.phr_inpSerach).press("Enter");
-  }
-
-  async finalAssert() {
-    await expect(
-      this.page
-        .locator(homeLocators.css_lblAssert)
-        .filter({ hasText: homeLocators.txt_lblAssert })
-    ).toBeVisible();
   }
 }
