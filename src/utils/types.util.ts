@@ -27,6 +27,6 @@ export type AriaRole =
 export type AriaObject = {
   role: AriaRole;
   options: {
-    name: string;
+    name: string | RegExp;
   };
 };
