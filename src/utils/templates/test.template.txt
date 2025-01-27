@@ -1,5 +1,5 @@
-import { {{controllerName}} } from "{{subfolder}}../controllers/{{controllerName}}.spec";
-import { test } from "./{{suite}}.hooks";
+import { {{controllerName}} } from "{{subfolder}}../controllers/{{controllerName}}.spec.js";
+import { test } from "./{{suite}}.hooks.js";
 
 const {{controllerNameLowerCase}} = new {{controllerName}}();
 

@@ -1,4 +1,4 @@
-import { Controller } from "../utils/controller.utils";
+import { Controller } from "../utils/controller.utils.js";
 
 export class {{controllerName}} extends Controller {
   constructor() {

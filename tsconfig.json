@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                  // Usa el último estándar de JavaScript
+    "module": "NodeNext",               // Compatible con ESM y CommonJS
+    "moduleResolution": "NodeNext",     // Resolución de módulos para Node.js con ESM
+    "resolveJsonModule": true,          // Permite importar JSON directamente
+    "esModuleInterop": true,            // Mejora la interoperabilidad con CommonJS
+    "strict": true,                     // Habilita el modo estricto para mayor seguridad
+    "forceConsistentCasingInFileNames": true, // Evita problemas con mayúsculas/minúsculas
+    "skipLibCheck": true,               // Opcional: ignora errores en tipos de librerías externas
+    "outDir": "./dist",                 // Carpeta de salida para archivos compilados
+    "rootDir": "./src",                 // Carpeta raíz de los archivos fuente
+    "allowSyntheticDefaultImports": true, // Soporte para imports por defecto en CommonJS
+    "baseUrl": "./",                    // Base para rutas relativas
+    "paths": {                          // Alias opcionales para simplificar imports
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*"],              // Archivos TypeScript incluidos
+  "exclude": ["node_modules", "dist"]   // Excluye carpetas no necesarias
+}

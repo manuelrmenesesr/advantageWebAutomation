@@ -1,6 +1,6 @@
 import { Page, expect } from "@playwright/test";
-import { Component } from "../../utils/component.util";
-import { {{componentName}}Locators } from "./{{componentName}}.locators";
+import { Component } from "../../utils/component.util.js";
+import { {{componentName}}Locators } from "./{{componentName}}.locators.js";
 
 export class {{pascalComponentName}} extends Component {
   constructor(page: Page) {
