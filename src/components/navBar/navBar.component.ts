@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test";
-import { Component } from "../../utils/component.util";
-import { navBarLocators } from "./navBar.locators";
+import { Component } from "../../utils/component.util.js";
+import { navBarLocators } from "./navBar.locators.js";
 
 export class NavBar extends Component {
   constructor(page: Page) {

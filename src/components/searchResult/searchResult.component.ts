@@ -1,6 +1,6 @@
 import { Page, expect } from "@playwright/test";
-import { Component } from "../../utils/component.util";
-import { searchResultLocators } from "./searchResult.locators";
+import { Component } from "../../utils/component.util.js";
+import { searchResultLocators } from "./searchResult.locators.js";
 
 export class SearchResult extends Component {
   constructor(page: Page) {

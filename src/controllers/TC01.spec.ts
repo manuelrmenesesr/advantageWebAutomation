@@ -1,16 +1,18 @@
-import { Controller } from "../utils/controller.utils";
-import { Home } from "../components/home/home.component";
-import { NavBar } from "../components/navBar/navBar.component";
-import { Product } from "../components/product/product.component";
-import { SearchResult } from "../components/searchResult/searchResult.component";
-import { OrderPayment } from "../components/orderPayment/orderPayment.component";
+import { Controller } from "../utils/controller.utils.js";
+import { Home } from "../components/home/home.component.js";
+import { NavBar } from "../components/navBar/navBar.component.js";
+import { Product } from "../components/product/product.component.js";
+import { SearchResult } from "../components/searchResult/searchResult.component.js";
+import { OrderPayment } from "../components/orderPayment/orderPayment.component.js";
+import authData from "../models/auth.mock.json" assert { type: 'json' };
 
 export class TC01 extends Controller {
+
   constructor() {
-    super("TC01");
+    super("Proceso de compra E2E");
   }
 
-  protected async workflow() {
+  protected async workflow(data: unknown) {
     const home = new Home(this.page);
     const searchResult = new SearchResult(this.page);
     const product = new Product(this.page);
@@ -33,7 +35,7 @@ export class TC01 extends Controller {
     );
     await product.clickOnAddToCart();
     await navBar.clickOnCheckout();
-    await orderPayment.login("josem00", "Kesadilla95!");
+    await orderPayment.login(authData.username, authData.password);
     await orderPayment.clickOnNext();
     await orderPayment.clickOnPayNow();
   }

@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test";
-import { Component } from "../../utils/component.util";
-import { orderPaymentLocators } from "./orderPayment.locators";
+import { Component } from "../../utils/component.util.js";
+import { orderPaymentLocators } from "./orderPayment.locators.js";
 
 export class OrderPayment extends Component {
   constructor(page: Page) {

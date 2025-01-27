@@ -1,5 +1,5 @@
-import { TC01 } from "../controllers/TC01.spec";
-import { test } from "./.hooks";
+import { TC01 } from "../controllers/TC01.spec.js";
+import { test } from "./.hooks.js";
 
 const tc01 = new TC01();
 

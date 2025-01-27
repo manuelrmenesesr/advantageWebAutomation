@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test";
-import { Component } from "../../utils/component.util";
-import { homeLocators } from "./home.locators";
+import { Component } from "../../utils/component.util.js";
+import { homeLocators } from "./home.locators.js";
 
 export class Home extends Component {
   constructor(page: Page) {
