@@ -14,11 +14,11 @@ export class Controller {
 
   protected async loadDataTest() {}
 
-  protected async workflow() {}
+  protected async workflow(data?: unknown) {}
 
-  public async exec(page: Page) {
+  public async exec(page: Page, data?: unknown) {
     this.page = page;
     await this.loadDataTest();
-    await this.workflow();
+    await this.workflow(data);
   }
 }
