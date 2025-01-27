@@ -25,6 +25,7 @@ const projects = process.env.CI
     ];
 
 export default defineConfig({
+  timeout: 1 * 60 * 1000,
   testDir: "./src/tests",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
@@ -39,5 +40,5 @@ export default defineConfig({
     trace: "on-first-retry",
     video: process.env.CI ? "on" : "off",
   },
-  projects,
+  projects
 });
