@@ -3,11 +3,11 @@
     "products": [
       {
         "searchData": "Chromebook",
-        "products": "HP Chromebook 14 G1(ENERGY STAR)"
+        "product": "HP Chromebook 14 G1(ENERGY STAR)"
       },
       {
         "searchData": "Headphones",
-        "products": "Beats Studio 2 Over-Ear Matte Black Headphones"
+        "product": "Beats Studio 2 Over-Ear Matte Black Headphones"
       }
     ]
   },
@@ -15,7 +15,7 @@
     "products": [
       {
         "searchData": "Speakers",
-        "products": "BOSE SOUNDLINK BLUETOOTH SPEAKER III"
+        "product": "BOSE SOUNDLINK BLUETOOTH SPEAKER III"
       }
     ]
   },
@@ -23,15 +23,15 @@
     "products": [
       {
         "searchData": "Tablets",
-        "products": "HP ELITEPAD 1000 G2 TABLET"
+        "product": "HP ELITEPAD 1000 G2 TABLET"
       },
       {
         "searchData": "Mice",
-        "products": "HP USB 3 BUTTON OPTICAL MOUSE"
+        "product": "HP USB 3 BUTTON OPTICAL MOUSE"
       },
       {
         "searchData": "Laptops",
-        "products": "HP CHROMEBOOK 14 G1(ENERGY STAR)"
+        "product": "HP CHROMEBOOK 14 G1(ENERGY STAR)"
       }
     ]
   }
