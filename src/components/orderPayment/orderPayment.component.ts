@@ -30,6 +30,13 @@ export class OrderPayment extends Component {
     await this.clickOnLogin();
   }
 
+  async loginSuccess() {
+    return !(await this.page
+      .locator(orderPaymentLocators.lblLoginFailed.css)
+      .getByText(orderPaymentLocators.lblLoginFailed.txt)
+      .isVisible());
+  }
+
   async clickOnNext() {
     await this.page
       .getByRole(

@@ -4,8 +4,8 @@ import data from "../models/TC01.mock.json" assert { type: "json" };
 
 const tc01 = new TC01();
 
-data.forEach((products, index) => {
+data.forEach((data, index) => {
   test(`${tc01.getDescription()} - Iteración ${index + 1}`, async ({ page }) => {
-    await tc01.exec(page, products);
+    await tc01.exec(page, data.products);
   });
 });

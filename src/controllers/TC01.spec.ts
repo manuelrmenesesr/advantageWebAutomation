@@ -11,23 +11,19 @@ type DataProducts = {
   product: string;
 };
 
-type DataProviderElement = {
-  products: DataProducts[];
-};
-
 export class TC01 extends Controller {
   constructor() {
     super("Proceso de compra E2E");
   }
 
-  protected async workflow(data: DataProviderElement) {
+  protected async workflow(data: DataProducts[]) {
     const home = new Home(this.page);
     const searchResult = new SearchResult(this.page);
     const product = new Product(this.page);
     const navBar = new NavBar(this.page);
     const orderPayment = new OrderPayment(this.page);
 
-    data.products.forEach(async (dataProduct) => {
+    for (const dataProduct of data) {
       await navBar.goHome();
       await home.clickOnSearchOption();
       await home.enterSearchData(dataProduct.searchData);
@@ -35,10 +31,8 @@ export class TC01 extends Controller {
       await searchResult.searchResultAssert();
       await searchResult.clickOnProduct(dataProduct.product);
       await product.clickOnAddToCart();
-    });
+    }
     await navBar.clickOnCheckout();
     await orderPayment.login(authData.username, authData.password);
-    // await orderPayment.clickOnNext();
-    // await orderPayment.clickOnPayNow();
   }
 }
