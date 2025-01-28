@@ -1,4 +1,4 @@
-import { AriaObject } from "../../utils/types.util";
+import { AriaObject } from "../../utils/types.util.js";
 
 const role_btnAdvantageDemo: AriaObject = {
   role: "link",
@@ -7,7 +7,7 @@ const role_btnAdvantageDemo: AriaObject = {
 
 const role_btnCheckout: AriaObject = {
   role: "button",
-  options: { name: /CHECKOUT \(\$\d+\.\d+\)/ },
+  options: { name: /CHECKOUT/ },
 };
 
 export const navBarLocators = {
